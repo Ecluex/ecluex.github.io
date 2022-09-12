@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <!-- Page Descriptors -->
+        <title>Ecluex</title>
+        <link rel="shortcut icon" type="image/png" href="/favicon.png">
+        
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+        <!-- Topbar -->
+        <div class="topbar top-name">
+            <a href="/index.html"><img class="logo" src="/assets/images/Logo-Full.png" height="100%"></a>
+            <a class="a" href="/index.html">Home</a>
+            <a class="a" href="/index.html">Music Library</a>
+            <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+            <a class="search-a" href="/search.html"><img class="search-img" src="/assets/icons/bold/search.png" height="60%"></a>
+       </div>
+
+    </head>
+
+    <style>
+
+            /* Animations */
+        
+            @keyframes in {
+                from {color: #FFFFFF}
+                to {color: #BABABA}
+            }
+
+            @keyframes out {
+                from {color: #BABABA;}
+                to {color: #FFFFFF}
+            }
+
+            /* Other */
+
+        .topbar {
+            background-color: #000;
+            width: 100%;
+            height: 5%;
+        }
+
+        .a {
+            color: #FFFFFF;
+            font-family: 'Orbitron', sans-serif;
+            float: left;
+            text-align: center;
+            text-decoration: none;
+            padding: 14px 16px;
+            font-size: 20px;
+        }
+
+        .search-a {
+            float: right;
+            margin: 0;
+            margin: 0;
+            top: 50%;
+            -ms-transform: translateY(25%);
+            transform: translateY(25%);
+            padding-right: 7;
+        }
+
+        .a:hover {
+            animation-name: in;
+            animation-duration: 0.5s;
+            color: #BABABA;
+        }
+
+        .a:not(:hover) {
+            animation-name: out;
+            animation-duration: 0.5s;
+            color: #FFF;
+        }
+
+        .logo {
+           padding-left: 7;
+           float: left !important;
+        }
+
+        body {
+            margin: 0;
+        }
+    </style>
+
+  
+       
+    
+</html>
