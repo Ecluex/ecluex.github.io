@@ -1,0 +1,14 @@
+/* Body */
+
+body {
+    margin: 0;
+}
+
+
+/* Topbar */
+
+.topbar-embed {
+    width: 100%;
+    height: 100vh;
+    outline: none;
+}
