@@ -9,17 +9,30 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
 
+        <script>
+            function redirecttoindex() {
+                parent.document.location.href = "http://www.example.com";
+            };
+
+            function redirect(url) {
+                parent.document.location.href = url;
+            };
+        </script>
+
+
         <!-- Topbar -->
         <div class="topbar top-name">
             <!-- I know this topbar is scuffed, don't mention it thanks. -->
-            <a href="/index.html"><img class="logo" src="/assets/images/Logo-Full.png" height="1600%" width="4.5%"></a>
-            <a class="a" href="/index.html">Home</a>
-            <a class="a" href="/index.html">Music Library</a>
-            <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
-            <a class="search-a" href="/search.html"><img class="search-img" src="/assets/icons/bold/search.png" height="60%"></a>
+            <a onclick="redirecttoindex()" href="/index.html"><img class="logo" src="/assets/images/Logo-Full.png" height="1600%" width="4.5%"></a>
+            <a onclick="redirect('/index.html')" href="/index.html" class="a">Home</a>
+            <a onclick="redirect('/index.html')" href="/index.html" class="a">Music Library</a>
+            <a onclick="redirect('/search.html')" class="search-a" href="/search.html"><img class="search-img" src="/assets/icons/bold/search.png" height="60%"></a>
        </div>
 
     </head>
+
+
+    
 
     <style>
 
