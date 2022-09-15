@@ -5,3 +5,4 @@ User-agent: *
 
 Disallow: /assets
 Disallow: /m
+Disallow: /404
