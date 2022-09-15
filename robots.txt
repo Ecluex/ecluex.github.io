@@ -1,1 +1,7 @@
+# Ecluex robots.txt file
+# Learn morre about a robots.txt file at https://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+
 Disallow: /assets
+Disallow: /m
