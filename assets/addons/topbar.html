@@ -21,12 +21,12 @@
 
 
         <!-- Topbar -->
-        <div class="topbar top-name">
+        <div class="topbar top-name" id="stickynav">
             <!-- I know this topbar is scuffed, don't mention it thanks. -->
-            <a onclick="redirecttoindex()" href="/index.html"><img class="logo" src="/assets/images/Logo-Full.png" height="1600%" width="3.8%"></a>
-            <a onclick="redirect('/')" href="/index.html" class="a">Home</a>
-            <a onclick="redirect('/')" href="/index.html" class="a">Music Library</a>
-            <a onclick="redirect('/search')" class="search-a" href="/search.html"><img class="search-img" src="/assets/icons/bold/search.png" height="60%"></a>
+            <a onclick="redirecttoindex()" href="/"><img class="logo" src="/assets/images/Logo-Full.png" height="1600%" width="3.8%"></a>
+            <a onclick="redirect('/')" href="/" class="a">Home</a>
+            <a onclick="redirect('/')" href="/" class="a">Music Library</a>
+            <a onclick="redirect('/search.html')" class="search-a" href="/search.html"><img class="search-img" src="/assets/icons/bold/search.png" height="1600%"></a>
        </div>
 
     </head>
@@ -68,8 +68,6 @@
 
         .search-a {
             float: right;
-            margin: 0;
-            margin: 0;
             top: 50%;
             -ms-transform: translateY(25%);
             transform: translateY(25%);
@@ -97,6 +95,18 @@
         body {
             margin: 0;
         }
+
+        /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
     </style>
 
   
