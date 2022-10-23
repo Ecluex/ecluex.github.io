@@ -14,7 +14,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        
+       
     </head>
 
    
@@ -63,6 +63,19 @@
             /* width: 40%; */
         }
 
+        button {
+            background-color: #000;
+            transition-duration: 0.4s;
+            color: #FFF;
+            border-radius: 12px;
+            box-shadow: 0 8px 10px 0 rgba(156, 156, 156, 0.2);
+        }
+
+        button:hover {
+            background-color: #FFF; /* Green */
+            color: #000;
+        }
+
     </style>
 
     <body>
@@ -70,6 +83,8 @@
             <img class="logo-large" src="/assets/images/Logo-Full.png" height="100%">
             <h1 class="header">404</h1>
             <p class="Subheader">Page Not Found</p>
+            <button id="back" onclick="history.back()">Back</button>
+            <button id="home" onclick="window.location.replace('https\://ecluex.github.io/');">Home</button>
         </div>
     </body>
 </html>
