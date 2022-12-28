@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Ecluex</title>
+        <link rel="shortcut icon" type="image/png" href="/favicon.ico">
+        <link rel="stylesheet" href="/assets/styles/global.css">
+    </head>
+
+    <style>
+        #navbar {
+          background-color: rgba(0, 0, 0, 0.9); /* black with 50% opacity */
+          position: fixed; /* make the topbar stick to the top of the page when scrolling */
+          top: 0;
+          width: 100%;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          z-index: 999;
+        }
+      
+        #logo {
+          display: inline-block; /* display the logo inline with the links */
+          max-width: 120px; /* constrain the width of the logo */
+          max-height: 120%;
+          padding-top: 20%;
+        }
+      
+        #navbar a {
+          color: white; /* set the color of the links to white */
+          display: inline-block; /* display the links inline with each other */
+          padding: 14px 16px; /* add some padding to the links */
+          text-decoration: none; /* remove the underline from the links */
+          line-height: 50px;
+          transition: color 0.5s;
+        }
+
+        @media screen and (max-width: 768px) {
+  #navbar {
+    /* other style properties */
+    display: flex; /* display the topbar as a flex container */
+    justify-content: center; /* center the items horizontally within the topbar */
+  }
+}
+
+      
+        #navbar a:hover {
+          /* background-color: rgba(255, 255, 255, 0.2); change the background color of the links when hovering */
+          color: #ffffff80;
+        }
+
+        body {
+            margin-top: 100px;
+        }
+
+        .sm-a {
+            padding-top: 90%;
+        }
+
+        .sm-div {
+            float: right;
+        }
+
+        #secondary-navbar {
+          /* other style properties */
+  display: flex; /* display the secondary topbar as a flex container */
+  align-items: center; /* center the elements in the secondary topbar horizontally */
+  justify-content: space-between; /* distribute the space between the elements in the secondary topbar evenly */
+  position: fixed; /* position the secondary topbar fixed to the top of the viewport */
+  top: 50px; /* set the top position of the secondary topbar to 50px */
+  width: 100%; /* make the secondary topbar the full width of the viewport */
+  height: 50px; /* set the height of the secondary topbar */
+  background-color: #ffffff; /* set the background color of the secondary topbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* add a box shadow to the secondary topbar */
+  z-index: 1; /* set the z-index of the secondary topbar to 1 */
+}
+
+#secondary-navbar form {
+  /* other style properties */
+  display: flex; /* display the form as a flex container */
+  align-items: center; /* center the form vertically within the secondary navbar */
+  justify-content: center; /* center the form horizontally within the secondary navbar */
+  margin: 0 auto; /* center the form within the secondary navbar */
+  max-width: 800px; /* set the maximum width of the form */
+  width: 80%; /* set the width of the form to 80% of the secondary navbar */
+  height: 40px; /* set the height of the form */
+  border-radius: 20px; /* add rounded corners to the form */
+  background-color: #ffffff80; /* set the background color of the form to white with 80% opacity */
+}
+
+#secondary-navbar form input[type="text"] {
+  /* other style properties */
+  display: block; /* display the form field as a block element */
+  width: 100%; /* make the form field the full width of the secondary topbar */
+  height: 100%; /* make the form field the full height of the secondary topbar */
+  padding: 0 40px 0 20px; /* add padding to the left and right of the form field */
+  border: none; /* remove the border from the form field */
+  font-size: 16px; /* set the font size of the form field */
+  color: #666666; /* set the color of the form field */
+  background-color: #ffffff; /* set the background color of the form field */
+  outline: none; /* remove the outline from the form field */
+}
+
+#secondary-navbar form img {
+  /* other style properties */
+  display: inline-block; /* display the image as an inline-block element */
+  margin: 0 10px; /* add a margin to the right of the image */
+  width: 24px; /* set the width of the image */
+  height: 24px; /* set the height of the image */
+
+}
+
+#grid {
+  /* other style properties */
+  display: grid; /* display the grid as a grid container */
+  grid-template-columns: repeat(3, 1fr); /* create 3 equal-sized columns in the grid */
+  grid-gap: 20px; /* add a gap of 20px between the items in the grid */
+  width: 80%; /* set the width of the grid to 80% of the parent container */
+  margin: 0 auto; /* center the grid within the parent container */
+}
+
+.item {
+  /* other style properties */
+  display: flex; /* display the item as a flex container */
+  flex-direction: column; /* stack the elements in the item vertically */
+  align-items: center; /* center the elements in the item horizontally */
+  text-align: center; /* center the text in the item */
+  padding: 20px; /* add padding to the item */
+  /* background-color: #d5d5d5; set the background color of the item */
+  border-radius: 10px; /* add rounded corners to the item */
+}
+
+.item img {
+  /* other style properties */
+  width: 100px; /* set the width of the header image */
+  height: 100px; /* set the height of the header image */
+  border-radius: 50%; /* round the corners of the header image */
+  object-fit: cover; /* scale the header image to cover the entire container */
+}
+
+.item h3 {
+  /* other style properties */
+  margin: 10px 0; /* add a margin to the top and bottom of the title */
+  font-size: 18px; /* set the font size of the title */
+  font-weight: bold; /* make the title bold */
+  color: #000000; /* set the color of the title */
+}
+
+.item p {
+  /* other style properties */
+  margin: 5px 0; /* add a margin to the top and bottom of the author and length */
+  font-size: 14px; /* set the font size of the author and length */
+  color: #666666; /* set the color of the author and length */
+}
+
+.item p img {
+  /* other style properties */
+  display: inline-block; /* display the icon as an inline block element */
+  margin: 0 5px 0 0; /* add a margin to the right of the icon */
+  vertical-align: middle; /* align the icon vertically with the text */
+}
+
+hr {
+  /* other style properties */
+  border-radius: 50%; /* round the corners of the hr element */
+  margin: 0 auto; /* center the hr element */
+  width: 80%; /* set the width of the hr element to 80% */
+}
+
+.featured-item {
+  /* other style properties */
+  display: flex; /* display the featured item as a flex container */
+  justify-content: space-between; /* distribute the space between the elements in the featured item evenly */
+  align-items: center; /* center the elements in the featured item vertically */
+  width: 100%; /* make the featured item the full width of the parent element */
+  position: relative; /* position the featured item as a relative element */
+  padding-left: 10%;
+}
+
+.featured-item img {
+  /* other style properties */
+  width: 300px; /* set the width of the image */
+  height: 300px; /* set the height of the image */
+  object-fit: cover; /* resize the image to cover the width and height */
+}
+
+.featured-item-info {
+  /* other style properties */
+  display: flex; /* display the container as a flex container */
+  flex-direction: column; /* set the direction of the elements in the container to column */
+  align-items: flex-start; /* align the elements in the container to the start of the container */
+  position: absolute; /* position the container as an absolute element */
+  top: 0; /* set the top position of the container to 0 */
+  left: 0; /* set the left position of the container to 0 */
+  padding-left: 22%;
+}
+
+.featured-item-name {
+  /* other style properties */
+  font-size: 24px; /* set the font size of the name */
+  font-weight: bold; /* set the font weight of the name */
+  margin: 0 0 8px 0; /* add margin to the bottom of the name */
+}
+
+.featured-item-author {
+  /* other style properties */
+  font-size: 18px; /* set the font size of the author */
+  font-weight: bold; /* set the font weight of the author */
+  margin: 0 0 8px 0; /* add margin to the bottom of the author */
+}
+
+.featured-item-length {
+  /* other style properties */
+  font-size: 16px; /* set the font size of the length */
+  color: #666666; /* set the color of the length */
+  margin: 0; /* remove the margin from the length */
+}
+
+.featured-item-name::before {
+  content: "Featured"; /* insert the "featured" label */
+  font-size: 14px; /* set the font size of the label */
+  font-weight: bold; /* set the font weight of the label */
+  color: #FFFFFF; /* set the color of the label */
+  background-color: #000000; /* set the background color of the label */
+  border-radius: 2px; /* round the corners of the label */
+  padding: 2px 4px; /* add padding to the label */
+  margin-right: 8px; /* add margin to the right of the label */
+}
+
+
+
+      </style>
+
+      <script>
+        // select the search form
+const searchForm = document.querySelector("#search-form");
+
+// attach an event listener to the search form
+searchForm.addEventListener("submit", (event) => {
+  // prevent the default action of the form (submitting the form)
+  event.preventDefault();
+
+  // get the search query from the form field
+  const searchQuery = document.querySelector("#search-query").value;
+
+  // encode the search query
+  const encodedSearchQuery = encodeURIComponent(searchQuery);
+
+  // add the search parameter to the end of the URL
+  window.location.href = `?search=${encodedSearchQuery}`;
+});
+
+      </script>
+
+    <body>
+        <div id="navbar">
+            <a href="#home">
+              <img src="/assets/images/Ecluex_FULL.png" alt="Logo" id="logo">
+            </a>
+            <a href="#link1" class="font_orbitron">Home</a>
+            <a href="#link2" class="font_orbitron">Music</a>
+            <a href="#link3" class="font_orbitron">Artists</a>
+
+            <div class="sm-div" style="float:right;">
+                <a href="#"><img src="https://cdn.wolfite.net/icons/twitter/512x512.png" alt="twitter" width="24" height="24" object-fit="cover" class="sm-a"></a>
+                <a href="#"><img src="https://cdn.wolfite.net/icons/youtube/512x512.png" alt="YouTube" width="24" height="24" object-fit="cover" class="sm-a"></a>
+            </div>
+          </div>
+
+          <!-- create a container for the featured item -->
+<div class="featured-item">
+  <!-- insert an image for the featured item -->
+  <img src="/assets/images/featured-item-placeholder.png" alt="Featured Item" width="100" height="100">
+  <!-- create a container for the name, author, and length of the featured item -->
+  <div class="featured-item-info">
+    <!-- insert the name of the featured item -->
+    <h2 class="featured-item-name">Song</h2>
+    <!-- insert the author of the featured item -->
+    <h3 class="featured-item-author">Artist</h3>
+    <!-- insert the length of the featured item -->
+    <p class="featured-item-length">3:07m</p>
+  </div>
+</div>
+
+
+          <h1 class="font_orbitron" style="text-align: left; padding-left: 10%;">New releases</h1>
+            <hr>
+          
+
+          <div id="grid">
+            <!-- create a container for the first item in the grid -->
+            <div class="item">
+              <!-- add a header image to the container -->
+              <img src="https://cdn.wolfite.net/icons/search-black/512x512.png" alt="Image 1" width="100" height="100">
+              <!-- add a title to the container -->
+              <h3>Song</h3>
+              <!-- add an author to the container -->
+              <p>Artist</p>
+              <!-- add a length to the container -->
+              <p>3:07m</p>
+            </div>
+            <!-- create a container for the second item in the grid -->
+            <div class="item">
+              <!-- add a header image to the container -->
+              <img src="https://cdn.wolfite.net/icons/search-black/512x512.png" alt="Image 2" width="100" height="100">
+              <!-- add a title to the container -->
+              <h3>Song 2</h3>
+              <!-- add an author to the container -->
+              <p>Artist</p>
+              <!-- add a length to the container -->
+              <p>2:34m</p>
+            </div>
+            <!-- create a container for the third item in the grid -->
+            <div class="item">
+              <!-- add a header image to the container -->
+              <img src="https://cdn.wolfite.net/icons/search-black/512x512.png" alt="Image 3" width="100" height="100">
+              <!-- add a title to the container -->
+              <h3>Song</h3>
+              <!-- add an author to the container -->
+              <p>Artist</p>
+              <!-- add a length to the container -->
+              <p>4:39m</p>
+            </div>
+
+          </div>
+    </body>
+</html>
