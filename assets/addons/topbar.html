@@ -2,7 +2,7 @@
     <head>
         <!-- Page Descriptors -->
         <title>Ecluex</title>
-        <link rel="shortcut icon" type="image/png" href="/favicon.png">
+        <link rel="shortcut icon" type="image/png" href="/favicon.ico">
         
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,10 +23,12 @@
         <!-- Topbar -->
         <div class="topbar top-name" id="stickynav">
             <!-- I know this topbar is scuffed, don't mention it thanks. -->
-            <a onclick="redirecttoindex()" href="/"><img class="logo" src="/assets/images/Logo-Full.png" height="1600%" width="3.8%"></a>
+            <a onclick="redirecttoindex()" href="/"><img class="logo" src="/assets/images/Ecluex_FULL.png" height="1600%" width="8.4%"></a>
             <a onclick="redirect('/')" href="/" class="a">Home</a>
-            <a onclick="redirect('/')" href="/" class="a">Music Library</a>
-            <a onclick="redirect('/search.html')" class="search-a" href="/search.html"><img class="search-img" src="/assets/icons/bold/search.png" height="1600%"></a>
+            <a onclick="redirect('/')" href="/" class="a">Library</a>
+            <a onclick="redirect('/')" href="/" class="a">Artists</a>
+            <a onclick="redirect('/')" href="/" class="a right">Policy</a>
+            <!-- <a onclick="redirect('/search.html')" class="search-a" href="/search.html"><img class="search-img" src="/assets/icons/bold/search.png" height="1600%"></a> -->
        </div>
 
     </head>
@@ -66,8 +68,12 @@
             font-size: 20px;
         }
 
-        .search-a {
+        .right {
             float: right;
+        }
+
+        .search-a {
+            float: right !important;
             top: 50%;
             -ms-transform: translateY(25%);
             transform: translateY(25%);
