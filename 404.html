@@ -76,15 +76,33 @@
             color: #000;
         }
 
+        .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
     </style>
 
     <body>
         <div style="text-align: center;" class="main">
-            <img class="logo-large" src="/assets/images/Logo-Full.png" height="100%">
+            <!-- <img class="logo-large" src="/assets/images/Ecluex_FULL.png" height="90%">
+            <h1></h1>
             <h1 class="header">404</h1>
             <p class="Subheader">Page Not Found</p>
             <button id="back" onclick="history.back()">Back</button>
-            <button id="home" onclick="window.location.replace('https\://ecluex.github.io/');">Home</button>
+            <button id="home" onclick="window.location.replace('https\://ecluex.github.io/');">Home</button> -->
+
+            <img class="logo-large center" src="/assets/images/Ecluex_404.png" height="90%">
         </div>
     </body>
 </html>
