@@ -2,6 +2,7 @@
 
 body {
     margin: 0;
+    color: #000000;
 }
 
 
@@ -21,6 +22,91 @@ body {
     color: white;
 }
 
+.color_gray {
+    color: gray;
+}
+
 .page-header {
     font-size: 60px;
 }
+
+.page-subheader {
+    font-size: 30px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 60px;
+  }
+
+  #navbar {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }#navbar {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  #navbar {
+    background-color: rgba(0, 0, 0, 0.9); /* black with 50% opacity */
+    position: fixed; /* make the topbar stick to the top of the page when scrolling */
+    top: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+  }
+
+  #logo {
+    display: inline-block; /* display the logo inline with the links */
+    max-width: 120px; /* constrain the width of the logo */
+    max-height: 120%;
+    padding-top: 20%;
+  }
+
+  #navbar a {
+    color: white; /* set the color of the links to white */
+    display: inline-block; /* display the links inline with each other */
+    padding: 14px 16px; /* add some padding to the links */
+    text-decoration: none; /* remove the underline from the links */
+    line-height: 50px;
+    transition: color 0.5s;
+  }
+
+  @media screen and (max-width: 768px) {
+#navbar {
+/* other style properties */
+display: flex; /* display the topbar as a flex container */
+justify-content: center; /* center the items horizontally within the topbar */
+}
+}
+
+
+  #navbar a:hover {
+    /* background-color: rgba(255, 255, 255, 0.2); change the background color of the links when hovering */
+    color: #ffffff80;
+  }
+
+  body {
+      margin-top: 100px;
+  }
+
+  .sm-a {
+      padding-top: 90%;
+  }
+
+  .sm-div {
+      float: right;
+  }
