@@ -51,6 +51,7 @@
 
         body {
             margin-top: 100px;
+            overflow-x: hidden;
         }
 
         .sm-a {
@@ -227,6 +228,59 @@ hr {
   margin-right: 8px; /* add margin to the right of the label */
 }
 
+.footer {
+  /* other style properties */
+  display: flex; /* display the container as a flex container */
+  flex-wrap: wrap; /* wrap the elements to the next line when there is not enough space */
+  justify-content: space-between; /* distribute the elements evenly horizontally */
+  align-items: center; /* center the elements vertically */
+  padding: 24px; /* add padding to the container */
+  background-color: #222; /* set the background color of the container */
+  color: #fff; /* set the color of the text */
+}
+
+.footer img {
+  /* other style properties */
+  width: 420px; /* set the width of the image */
+  height: 100px; /* set the height of the image */
+  object-fit: cover; /* resize the image to cover the width and height */
+  margin: 0 0 24px 0; /* add margin to the bottom of the image */
+}
+
+.footer-links {
+  /* other style properties */
+  display: flex; /* display the container as a flex container */
+  flex-wrap: wrap; /* wrap the elements to the next line when there is not enough space */
+  justify-content: space-between; /* distribute the elements evenly horizontally */
+}
+
+.footer-row {
+  /* other style properties */
+  display: flex; /* display the container as a flex container */
+  justify-content: space-between; /* distribute the elements evenly horizontally */
+  width: 100%; /* set the width of the container */
+  flex-direction: column; /* set the direction of the main axis of the flex container to a column */
+  align-items: center; /* center the items along the cross axis of the flex container */
+}
+
+.footer-row a {
+  /* other style properties */
+  color: #fff; /* set the color of the hyperlink */
+  font-size: 18px; /* set the font size of the hyperlink */
+  text-decoration: none; /* remove the underline from the hyperlink */
+}
+
+.footer-row a:hover {
+  /* other style properties */
+  color: #eee; /* set the hover color of the hyperlink */
+}
+
+.footer {
+  /* other style properties */
+  /* position: fixed; position the footer at a fixed position */
+  bottom: 0; /* set the distance between the bottom edge of the footer and the bottom of its containing block to 0 */
+}
+
 
 
       </style>
@@ -323,5 +377,44 @@ searchForm.addEventListener("submit", (event) => {
             </div>
 
           </div>
+
+          <h1>/docs</h1>
+          <h1>/docs</h1>
+          <h1>/docs</h1>
+          <h1>/docs</h1>
+          <h1>/docs</h1>
+          <h1>/docs</h1>
+          <h1>/docs</h1>
+          <h1>/docs</h1>
+          <h1>/docs</h1>
+          <h1>/docs</h1>
+          <h1>/docs</h1>
+          <h1>/docs</h1>
+          <h1>/docs</h1>
+          <h1>/docs</h1>
+          <h1>/docs</h1>
+          <h1>/docs</h1>
+          <h1>/docs</h1>
+          <h1>/docs</h1>
+          <!-- create a container for the footer -->
+<div class="footer">
+  <!-- insert the logo -->
+  <img src="/assets/images/Ecluex_FULL.png" alt="Logo" width="300" height="100">
+  <!-- create a container for the rows of links -->
+  <div class="footer-links">
+    <!-- create a row of links -->
+    <div class="footer-row">
+      <!-- create a hyperlink -->
+      <a class="font_orbitron" href="/for/artists">Ecluex for artists</a>
+      <!-- create a hyperlink -->
+      <a class="font_orbitron" href="/for/gamedevs">Ecluex for game developers</a>
+      <!-- create a hyperlink -->
+      <a class="font_orbitron" href="/about">About Ecluex</a>
+      <!-- create a hyperlink -->
+      <!-- <a href="https://example.com/link4">Link 4</a> -->
+    </div>
+    <!-- create a row of links -->
+  </div>
+</div>
     </body>
 </html>
