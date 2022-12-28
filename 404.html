@@ -77,32 +77,50 @@
         }
 
         .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
+            display: block;
+            margin-left: auto;
+             margin-right: auto;
+             width: 50%;
+        }
 
-.vertical-center {
+        .vertical-center {
   margin: 0;
   position: absolute;
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+        }
+
+        .p404-page {
+  /* other style properties */
+  text-align: center; /* center the elements horizontally */
 }
+
+.p404-page img {
+  /* other style properties */
+  width: 2173px; /* set the width of the image */
+  height: 512px; /* set the height of the image */
+  object-fit: cover; /* resize the image to cover the width and height */
+  margin: 0 0 24px 0; /* add margin to the bottom of the image */
+}
+
+.p404-page h1 {
+  /* other style properties */
+  font-size: 36px; /* set the font size of the heading */
+  margin: 0; /* remove the margin from the heading */
+  color: #FFF;
+}
+
+        
 
     </style>
 
     <body>
-        <div style="text-align: center;" class="main">
-            <!-- <img class="logo-large" src="/assets/images/Ecluex_FULL.png" height="90%">
-            <h1></h1>
-            <h1 class="header">404</h1>
-            <p class="Subheader">Page Not Found</p>
-            <button id="back" onclick="history.back()">Back</button>
-            <button id="home" onclick="window.location.replace('https\://ecluex.github.io/');">Home</button> -->
-
-            <img class="logo-large center" src="/assets/images/Ecluex_404.png" height="90%">
-        </div>
+        <div class="p404-page font_orbitron">
+            <!-- insert the logo -->
+            <img src="/assets/images/Ecluex_FULL.png" alt="Logo" width="2173" height="512">
+            <!-- create a heading for the "404 - Page Not Found" text -->
+            <h1>404 - Page Not Found</h1>
+          </div>
     </body>
 </html>
