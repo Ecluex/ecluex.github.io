@@ -1,112 +1,134 @@
-/* Body */
+<!DOCTYPE html>
 
-body {
-    margin: 0;
-    color: #000000;
+<html>
+    <head>
+        <!-- Page Descriptors -->
+        <title>404 (Page Not Found) - Ecluex</title>
+        <link rel="shortcut icon" type="image/png" href="/favicon.png">
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+       
+    </head>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/styles/global.css">
+
+    <style>
+        body {
+            background-color: #000000;
+        }
+
+        .header {
+            font-family: 'Roboto', sans-serif;
+            color: #FFF;
+            font-size: 100px;
+            margin-top: -5%;
+        }
+
+        .Subheader {
+            font-family: 'Roboto', sans-serif;
+            color: #FFF;
+            font-size: 40px;
+            margin-top: -3%;
+        }
+
+        .main {
+            /* height: auto;
+            width: auto; */
+            padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+            vertical-align: top;
+            /* margin: -10; */
+            /* width: 50%; */
+            padding: 10px;
+            /* margin-top: -50%; */
+        }
+
+        .logo-large {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            /* width: 40%; */
+        }
+
+        button {
+            background-color: #000;
+            transition-duration: 0.4s;
+            color: #FFF;
+            border-radius: 12px;
+            box-shadow: 0 8px 10px 0 rgba(156, 156, 156, 0.2);
+        }
+
+        button:hover {
+            background-color: #FFF; /* Green */
+            color: #000;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+             margin-right: auto;
+             width: 50%;
+        }
+
+        .vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+        }
+
+        .p404-page {
+  /* other style properties */
+  text-align: center; /* center the elements horizontally */
 }
 
-
-/* Topbar */
-
-.topbar-embed {
-    width: 100%;
-    height: 5vh;
-    outline: none;
+.p404-page img {
+  /* other style properties */
+  width: 2173px; /* set the width of the image */
+  height: 512px; /* set the height of the image */
+  object-fit: cover; /* resize the image to cover the width and height */
+  margin: 0 0 24px 0; /* add margin to the bottom of the image */
 }
 
-.font_orbitron {
-    font-family: 'Orbitron', sans-serif; 
+.p404-page h1 {
+  /* other style properties */
+  font-size: 36px; /* set the font size of the heading */
+  margin: 0; /* remove the margin from the heading */
+  color: #FFF;
 }
 
-.color_white {
-    color: white;
-}
+        
 
-.color_gray {
-    color: gray;
-}
+    </style>
 
-.page-header {
-    font-size: 60px;
-}
+    <body>
 
-.page-subheader {
-    font-size: 30px;
-}
+        <div id="navbar">
+            <a href="#home">
+              <img src="/assets/images/Ecluex_FULL.png" alt="Logo" id="logo">
+            </a>
+            <a href="/" class="font_orbitron">Home</a>
+            <a href="/music" class="font_orbitron">Music</a>
+            <a href="/artists" class="font_orbitron">Artists</a>
 
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  
-  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-  .sticky + .content {
-    padding-top: 60px;
-  }
-
-  #navbar {
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }#navbar {
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-
-  #navbar {
-    background-color: rgba(0, 0, 0, 0.9); /* black with 50% opacity */
-    position: fixed; /* make the topbar stick to the top of the page when scrolling */
-    top: 0;
-    width: 100%;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    z-index: 999;
-  }
-
-  #logo {
-    display: inline-block; /* display the logo inline with the links */
-    max-width: 120px; /* constrain the width of the logo */
-    max-height: 120%;
-    padding-top: 20%;
-  }
-
-  #navbar a {
-    color: white; /* set the color of the links to white */
-    display: inline-block; /* display the links inline with each other */
-    padding: 14px 16px; /* add some padding to the links */
-    text-decoration: none; /* remove the underline from the links */
-    line-height: 50px;
-    transition: color 0.5s;
-  }
-
-  @media screen and (max-width: 768px) {
-#navbar {
-/* other style properties */
-display: flex; /* display the topbar as a flex container */
-justify-content: center; /* center the items horizontally within the topbar */
-}
-}
-
-
-  #navbar a:hover {
-    /* background-color: rgba(255, 255, 255, 0.2); change the background color of the links when hovering */
-    color: #ffffff80;
-  }
-
-  body {
-      margin-top: 100px;
-  }
-
-  .sm-a {
-      padding-top: 90%;
-  }
-
-  .sm-div {
-      float: right;
-  }
+            <div class="sm-div" style="float:right;">
+                <a href="#"><img src="https://cdn.wolfite.net/icons/twitter/512x512.png" alt="twitter" width="24" height="24" object-fit="cover" class="sm-a"></a>
+                <a href="#"><img src="https://cdn.wolfite.net/icons/youtube/512x512.png" alt="YouTube" width="24" height="24" object-fit="cover" class="sm-a"></a>
+            </div>
+          </div>
+        <div class="p404-page font_orbitron">
+            <!-- insert the logo -->
+            <img src="/assets/images/Ecluex_FULL.png" alt="Logo" width="2173" height="512">
+            <!-- create a heading for the "404 - Page Not Found" text -->
+            <h1>404 - Page Not Found</h1>
+          </div>
+    </body>
+</html>
